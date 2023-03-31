@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   birthday = "March 13 2002"
 
-  name = 'Saud';
+  name = 'Mohammed Saud Sayed';
 
   isdisabled = true;
 
@@ -28,6 +28,12 @@ export class HomeComponent implements OnInit{
   stylevalue = {"color": "orange", "font-size": "20px"}
 
   colors = ["red", "orange", "black", "blue"]
+
+  partnersname = "Prachi Bhatt"
+
+  colorname2 = 'blue';
+
+  font2 = "20px";
 
   ngOnInit(): void {
     

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { YashComponent } from './yash/yash.component';
 // import { AccessRoutingModule } from './access/access-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule // For Two way Binding
+    BrowserAnimationsModule, // For Two way Binding
     // LoginComponent,
-    // AccessRoutingModule
+    // AccessRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

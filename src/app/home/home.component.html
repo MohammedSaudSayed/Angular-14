@@ -9,10 +9,11 @@
 <h3 [ngStyle]="stylevalue">My salary is {{salary | currency:"INR"}}</h3>
 <!-- ngif -->
 <h3 *ngIf="salary>50000">Salary is {{salary | currency:"INR"}} greater than 50000</h3>
-<h3 *ngIf="salary>100000">Salary is {{salary | currency:"INR"}} not greater than 100000</h3> <!--it wont show because condition is false-!>
+<h3 *ngIf="salary>100000">Salary is {{salary | currency:"INR"}} not greater than 100000</h3>
+<!--it wont show because condition is false-!>
 <!- ngfor Binding -->
 <ul>
-    <li *ngFor="let item of colors">{{item}}</li>
+    <li [style.color]="colorname2" [style.font-size]="font2" *ngFor="let item of colors">{{item}}</li>
 </ul>
 <!-- ngswitch remaining -->
 
@@ -35,5 +36,5 @@
 <input [(ngModel)]="headername">
 
 <br> <br>
-<!-- Style Bindung -->
+<!-- Style Binding -->
 <h4 [style.color]="colorname" [style.font-size]="font">My name is {{name}}</h4>
