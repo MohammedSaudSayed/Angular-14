@@ -1,0 +1,39 @@
+<!-- Data Binding -->
+<h2>{{headername | uppercase}}</h2>
+<h3>My salary is {{salary | currency:"INR"}}</h3>
+<h3>My percentage is {{percentage | percent}}</h3>
+<!-- <h3>My birth date is {{birthday | date}}</h3> -->
+<!-- Different Class -->
+<h3 [ngClass]="classname">My salary is {{salary | currency:"INR"}}</h3>
+<!-- Different Style - it will not take string but object -->
+<h3 [ngStyle]="stylevalue">My salary is {{salary | currency:"INR"}}</h3>
+<!-- ngif -->
+<h3 *ngIf="salary>50000">Salary is {{salary | currency:"INR"}} greater than 50000</h3>
+<h3 *ngIf="salary>100000">Salary is {{salary | currency:"INR"}} not greater than 100000</h3> <!--it wont show because condition is false-!>
+<!- ngfor Binding -->
+<ul>
+    <li *ngFor="let item of colors">{{item}}</li>
+</ul>
+<!-- ngswitch remaining -->
+
+<br>
+<!-- Event Binding -->
+<button (click)="FunctionClick('Now kick me & see the message😊')">Click Me</button>
+<br> <br>
+<button (click)="FunctiononClick()">Kick me</button>
+<br> <br>
+<input #txt (change)="FunctionClick(txt.value)">
+
+<br> <br>
+<!-- Property Binding -->
+<input [disabled]="isdisabled" #txt (change)="FunctionClick(txt.value)">
+<br> <br>
+<input [value]="isdisabled" [disabled]="isdisabled" #txt (change)="FunctionClick(txt.value)">
+
+<br> <br>
+<!-- Two way Binding -->
+<input [(ngModel)]="headername">
+
+<br> <br>
+<!-- Style Bindung -->
+<h4 [style.color]="colorname" [style.font-size]="font">My name is {{name}}</h4>
